@@ -22,6 +22,28 @@ html {
 body {
     line-height: 1.6;
     color: var(--text-color);
+    background: var(--bg-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(8, 47, 240, 0.03) 0%, transparent 50%);
+    animation: backgroundPulse 10s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes backgroundPulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
 }
 
 /* Hero Section */
@@ -37,14 +59,23 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
+.hero::before,
+.hero::after {
     content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
+    width: 200vmax;
+    height: 200vmax;
+    top: -100vmax;
+    left: -100vmax;
+    z-index: 0;
+    animation: rotate 20s linear infinite;
     background: radial-gradient(circle, var(--primary-color) 0%, transparent 50%);
     opacity: 0.1;
-    animation: rotate 20s linear infinite;
+}
+
+.hero::after {
+    animation: rotate 30s linear infinite reverse;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 40%);
 }
 
 @keyframes rotate {
