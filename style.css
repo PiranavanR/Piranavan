@@ -15,12 +15,17 @@ img, p, h1, h2, h3, button, .links, form, .typewriter, nav, .social-links, .skil
     -ms-user-select: none;
 }
 
-:root{
+:root {
     --bg-color: #000;
     --txt-color: #fff;
-    --main-color: #082ff0;
-}
-
+    --main-color: #082ff0;     /* Aerospace */
+    --webdev-color: #9333ea;   /* Web Dev */
+    --white: #fff;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --primary-color: var(--main-color);
+    --light-bg: #111;
+  }
+  
 html, body {
     width: 100%;
     height: 100%;
@@ -272,37 +277,118 @@ nav{
     display: flex;
     flex-direction: column;
 }
-
 .works {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.work-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+  }
+  
+  .works h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--txt-color);
+  }
+  
+  /* Grid layout for both Aerospace and Web Dev projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.card {
-    height: 450px;
-    width: 300px;
+  }
+  
+  .project-card {
+    background: #1a1a1a;
+    color: var(--txt-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.5s ease;
     position: relative;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+  
+  .project-card h3 {
+    padding: 1.2rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .project-card p {
+    padding: 0 1.5rem 1rem;
+    color: #ccc;
+  }
+  
+  .tech-stack {
+    padding: 1.5rem;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 36px;
-    perspective: 2500px;
-    margin: 20px;
-}
-
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-stack span {
+    padding: 0.25rem 0.75rem;
+    background: #2a2a2a;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    color: var(--txt-color);
+  }
+  
+  .aerospace .tech-stack span:hover {
+    background: var(--main-color);
+    transform: translateY(-2px);
+  }
+  .webdev .tech-stack span:hover {
+    background: var(--webdev-color);
+    transform: translateY(-2px);
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--main-color);
+    color: var(--white);
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .project-card.webdev .badge {
+    background: var(--webdev-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 .contact {
     min-height: 100vh;
     display: flex;
@@ -618,7 +704,121 @@ nav{
     transform: translateX(100%);
   }
 
-/* CONTACT */
+  .web-projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.web-project-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.web-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.web-project-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.web-project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.web-project-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+.web-projects-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+.web-projects-button button {
+    background: none;
+    color: #fff;
+    border: 1px solid var(--main-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.web-projects-button button:hover {
+    background: var(--main-color);
+}
+
+/* From Uiverse.io by satyamchaudharydev */ 
+.button-project {
+  --primary-color: #3228ef;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 7px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--webdev-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--webdev-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
 
 form{
     align-items: center;

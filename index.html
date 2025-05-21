@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Piranavan Portfolio</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+        <title>Piranavan R | Portfolio</title>
+        <meta name="description" content="Official portfolio of Piranavan R – Final-year Aerospace Engineering student and freelance web developer. Explore aerospace projects, web dev services, and publications." />
+        <meta name="keywords" content="Piranavan, Aerospace Engineer, Web Developer, Portfolio, CubeSat, VTOL UAV, React Developer India, Freelance web design, CanSat, AirTaxi simulation" />
+        <meta name="author" content="Piranavan R" />
+        <meta name="robots" content="index, follow" />
+      
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://piranavan.vercel.app/" />
+        <meta property="og:title" content="Piranavan R | Portfolio" />
+        <meta property="og:description" content="Explore aerospace projects, freelance web development services, and a journey into innovation and design." />
+        <meta property="og:image" content="img\Preview.png" />
+      
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Piranavan R | Portfolio" />
+        <meta name="twitter:description" content="Driven by innovation in aerospace and web technology. View projects, services, and publications." />
+        <meta name="twitter:image" content="img\Preview.png" />
+      
+        <!-- Styles & Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="style.css" />
+      
+        <!-- Analytics / Vercel Insight -->
+        <script defer src="/_vercel/insights/script.js"></script>
+      </head>
+      
 <body>
     <nav>
         <div class="nav-container">
@@ -116,43 +139,95 @@
         </div>
     </section>
     <section class="works" id="works">
-        <h2 class="heading" data-aos="flip-down" data-aos-duration="1500" style="margin: 2rem 0;">My works</h2>
-        <div id="work">
-            <h2>My Projects</h2>
-            <div class="project-container">
-              <div class="project">
-                <img src="img\AirTaxi Orthographic view.png" alt="Project 1 image" class="project-image"/>
-                <h3>AirTaxi Motion Simulation</h3>
-                <p>Designed a real-time AirTaxi simulation system for pilot training, simulating flight dynamics in a real-world environment. Customized the F450 frame casing to meet technical and aesthetic requirements. Focused on aerospace design and system integration.</p>
-              </div>
-
-              <div class="project">
-                <img src="img\Cansat.png" alt="CanSat Image" class="project-image"/>
-                <h3>CanSat</h3>
-                <p>Designed and built a CanSat prototype using a soda can to simulate a satellite. Integrated DHT11 and Hall Effect sensors to collect atmospheric and magnetic data during descent. Programmed with Arduino and used 3D-printed structures for housing. Focused on real-time telemetry and recovery optimization.</p>
-              </div>
-          
-              <div class="project">
-                <img src="img\Cubesat.jpg" alt="Cubesat Image" class="project-image"/>
-                <h3>CubeSat</h3>
-                <p>Developed a 1U CubeSat model with a 3D-printed PLA structure. Implemented sensor modules for environmental data acquisition and explored optical wireless data transmission in space-constrained environments. Published a research paper based on this experimental study.</p>
-              </div>
-          
-              <!-- Add more projects as needed -->
+        <h2 class="heading" data-aos="flip-down" data-aos-duration="1500" style="margin: 2rem 0;">My Works</h2>
+      
+        <!-- Aerospace Projects -->
+        <div class="project-grid">
+          <div class="project-card aerospace" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <span class="badge">Aerospace</span>
+            <img src="img/AirTaxi.png" alt="AirTaxi Simulation" class="project-image" />
+            <h3>AirTaxi Motion Simulation</h3>
+            <p>Real-time pilot training system simulating flight dynamics with a customized AirTaxi frame.</p>
+            <div class="tech-stack">
+              <span>Fusion 360</span>
+              <span>FPV</span>
+              <span>UAV Design</span>
             </div>
-        </div>
-          
-          
-        <h2 class="heading" data-aos="flip-down" data-aos-duration="1500" style="margin: 2rem 0;">Publication</h2>
-        <div class="pub-card">
-            <div class="pub-card-content">
-                <a href="https://ijsrem.com/download/experimental-study-of-optical-wireless-data-transmission-in-cubesats/" class="pub-card-title">EXPERIMENTAL STUDY OF OPTICAL WIRELESS DATA TRANSMISSION IN CUBESATS</a>
-                <p class="pub-card-para">International Journal of Scientific Reasearch in Engineering and Management | 2024</p>
-                <p class="pub-card-para">The study explored innovative data transmission techniques and their application to CubeSat design.</p>
+          </div>
+      
+          <div class="project-card aerospace" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+            <span class="badge">Aerospace</span>
+            <img src="img/Cansat.png" alt="CanSat Project" class="project-image" />
+            <h3>CanSat</h3>
+            <p>Sensor-integrated satellite simulation using Arduino and 3D-printed structure for data collection.</p>
+            <div class="tech-stack">
+              <span>Arduino</span>
+              <span>DHT11</span>
+              <span>Sensor System</span>
             </div>
+          </div>
+      
+          <div class="project-card aerospace" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+            <span class="badge">Aerospace</span>
+            <img src="img/Cubesat.jpg" alt="CubeSat Project" class="project-image" />
+            <h3>CubeSat</h3>
+            <p>3D-printed 1U CubeSat with sensors for optical wireless transmission. Published in IJSREM.</p>
+            <div class="tech-stack">
+              <span>CubeSat</span>
+              <span>3D Print</span>
+              <span>Wireless Data</span>
+            </div>
+          </div>
         </div>
+      
+        <!-- Web Development Projects -->
+        <h2 class="heading" data-aos="flip-down" data-aos-duration="1500" style="margin: 4rem 0 2rem;">Freelance Web Dev Projects</h2>
+      
+        <div class="project-grid">
+          <div class="project-card webdev" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <span class="badge">Web Dev</span>
+            <img src="https://monikaa.vercel.app/img/Preview.png" alt="Portfolio Website" class="project-image" />
+            <h3>Aerospace Portfolio</h3>
+            <p>A clean, responsive portfolio website showcasing academic projects and technical skills.</p>
+            <div class="tech-stack">
+                <span>React</span>
+                <span>CSS3</span>
+                <span>Javascript</span>
+            </div>
+            <button class="button-project" onclick="window.open('https\:\/\/monikaa.vercel.app', '_blank')">
+              Take a look
+              <div class="arrow-wrapper">
+                  <div class="arrow"></div>
+              </div>
+            </button>
+          </div>
+          <div class="project-card webdev" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <span class="badge">Web Dev</span>
+            <img src="https://athismithun.vercel.app/Preview.png" alt="Portfolio Website" class="project-image" />
+            <h3>Portfolio Website</h3>
+            <p>Combines sleek visuals with technical depth for standout first impressions.</p>
+            <div class="tech-stack">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+            </div>
+            <button class="button-project" onclick="window.open('https\:\/\/athismithun.vercel.app', '_blank')">
+              Take a look
+              <div class="arrow-wrapper">
+                  <div class="arrow"></div>
 
+              </div>
+            </button>
+          </div>
+        </div>
+      
+        <div class="web-projects-button" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" style="text-align: center; margin-top: 2rem;">
+          <button onclick="window.location.href='freelance.html'" style="padding: 0.8rem 2rem; background-color: var(--webdev-color); color: #fff; border: none; border-radius: 8px; cursor: pointer;">
+            See Full Portfolio & Pricing
+          </button>
+        </div>
     </section>
+      
     <section class="contact" id="contact">
         <h2 class="heading" data-aos="flip-down" data-aos-duration="1500">Drop a Message </h2>
         <div class="contact-container">
