@@ -87,6 +87,7 @@ body::before {
     0% { transform: scale(1); opacity: 0.5; }
     50% { transform: scale(1.5); opacity: 0.8; }
     100% { transform: scale(1); opacity: 0.5; }
+<<<<<<< HEAD
 }.floating-back-button {
     position: fixed;
     bottom: 2rem;
@@ -109,6 +110,9 @@ body::before {
     transform: scale(1.05);
   }
   
+=======
+}
+>>>>>>> fb3f3ee6503bbf9889324d5db2c4e3e9ab495309
 
 /* Hero Section */
 .hero {
@@ -296,6 +300,7 @@ body::before {
     transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 .button-project {
     --secondary-color: #fff;
     --hover-color: #111;
@@ -358,6 +363,8 @@ body::before {
   }
   
 
+=======
+>>>>>>> fb3f3ee6503bbf9889324d5db2c4e3e9ab495309
 /* Packages Section */
 .packages {
     padding: 5rem 2rem;
@@ -417,12 +424,21 @@ body::before {
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, transparent, rgba(8, 47, 240, 0.1));
+<<<<<<< HEAD
     opacity: 0;
     transition: all 1s ease;
 }
 
 .package-card:hover::before {
     opacity: 1;
+=======
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.package-card:hover::before {
+    transform: translateX(0);
+>>>>>>> fb3f3ee6503bbf9889324d5db2c4e3e9ab495309
 }
 
 .package-card.featured {
@@ -513,6 +529,7 @@ body::before {
     left: 100%;
 }
 
+<<<<<<< HEAD
 .custom-package-banner {
     background-color: var(--light-bg);
     color: var(--text-color);
@@ -537,6 +554,8 @@ body::before {
   }
   
 
+=======
+>>>>>>> fb3f3ee6503bbf9889324d5db2c4e3e9ab495309
 /* Add-ons Section */
 .addons {
     padding: 5rem 2rem;
@@ -763,4 +782,8 @@ body::before {
         width: 100%;
         max-width: 300px;
     }
+<<<<<<< HEAD
 }   
+=======
+}
+>>>>>>> fb3f3ee6503bbf9889324d5db2c4e3e9ab495309
